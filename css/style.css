@@ -316,10 +316,10 @@ figure {
       transition: 0.9s; }
     @media screen and (max-width: 1200px) {
       .fh5co-gallery .gallery-item {
-        width: 33.3333%; } }
+        width: 100%; } }
     @media screen and (max-width: 768px) {
       .fh5co-gallery .gallery-item {
-        width: 50%; } }
+        width: 100%; } }
     @media screen and (max-width: 480px) {
       .fh5co-gallery .gallery-item {
         width: 100%; } }
@@ -398,6 +398,29 @@ figure {
         visibility: visible;
         opacity: 1;
         bottom: 0px; }
+  .fh5co-gallery .fh5co-text {
+    float: right;
+    width: 100%; }
+    @media screen and (max-width: 768px) {
+      .fh5co-gallery .fh5co-text {
+        width: 100%; } }
+    @media screen and (max-width: 480px) {
+      .fh5co-gallery .fh5co-text {
+        width: 100%; } }
+    .fh5co-gallery .fh5co-text h2, .fh5co-gallery .fh5co-text h3 {
+      margin: 0;
+      padding: 0; }
+    .fh5co-gallery .fh5co-text h3 {
+      font-weight: 300;
+      margin-bottom: 10px;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 20px; }
+    .fh5co-gallery .fh5co-text h2 {
+      font-size: 16px;
+      letter-spacing: 2px;
+      margin-top: 10px;
+      font-weight: bold;
+      text-transform: uppercase; }
 
 .chart {
   width: 160px;
