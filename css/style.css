@@ -306,11 +306,11 @@ figure {
     .fh5co-gallery .gallery-item img {
       position: relative;
       max-width: 100%;
-      -webkit-transform: scale(1.2);
-      -moz-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-      -o-transform: scale(1.2);
-      transform: scale(1.2);
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1);
       -webkit-transition: 0.9s;
       -o-transition: 0.9s;
       transition: 0.9s; }
@@ -375,11 +375,11 @@ figure {
         right: 0;
         background: rgba(0, 0, 0, 0.5); }
     .fh5co-gallery .gallery-item:hover img {
-      -webkit-transform: scale(1);
-      -moz-transform: scale(1);
-      -ms-transform: scale(1);
-      -o-transform: scale(1);
-      transform: scale(1); }
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
+      transform: scale(1.2); }
     .fh5co-gallery .gallery-item:hover .overlay {
       visibility: visible;
       opacity: 1; }
