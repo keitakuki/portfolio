@@ -104,7 +104,9 @@
 					pieChart();
 				}, 800);
 			}
-			
+
+			$('body,html').animate({
+			scrollTop: 0},500);			
 		})
 	};
 
