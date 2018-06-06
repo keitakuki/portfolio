@@ -434,6 +434,7 @@ figure {
   position: relative;
   text-align: center; }
   .chart span {
+    font-size: 18px;
     position: absolute;
     top: 50%;
     left: 0;
