@@ -25,6 +25,16 @@
 		}
 	};
 
+	function getParam(name, url) {
+	    if (!url) url = window.location.href;
+	    name = name.replace(/[\[\]]/g, "\\$&");
+	    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+	        results = regex.exec(url);
+	    if (!results) return null;
+	    if (!results[2]) return '';
+	    return decodeURIComponent(results[2].replace(/\+/g, " "));
+	}
+
 	var getHeight = function() {
 		var extraHeight = 0;
 
@@ -49,6 +59,21 @@
 		});
 	};
 
+	var resetActiveTab = function() {
+		var targetTab = getParam("tab");
+
+		$('.fh5co-tab-menu li').removeClass('active');
+		$('.fh5co-tab-content.active').removeClass('active animated fadeOutDown fadeInUp');
+
+		if (targetTab) {
+			$('.fh5co-tab-menu li[tab=' + targetTab + ']').addClass('active');
+			$('.fh5co-tab-content[data-content="'+targetTab+'"]').addClass('animated fadeInUp active');
+		} else {
+			$('.fh5co-tab-menu li.default-active').addClass('active');
+			$('.fh5co-tab-content.default-active').addClass('animated fadeInUp active');
+		}
+	};
+
 	var tabContainer = function() {
 		getHeight();
 		$(window).resize(function(){
@@ -58,10 +83,14 @@
 
 	var tabClickTrigger = function() {
 		$('.fh5co-tab-menu a').on('click', function(event) {
-			event.preventDefault();
 			var $this = $(this),
 				data = $this.data('tab'),
+				trans = $this.data('trans'),
 				pie = $this.data('pie');
+
+			if ( trans != 'yes') {
+				event.preventDefault();
+			}
 
 			// add/remove active class
 			$('.fh5co-tab-menu li').removeClass('active');
@@ -112,6 +141,7 @@
 
 	// Document on load.
 	$(function(){
+		resetActiveTab();
 		tabContainer();
 		tabClickTrigger();
 		customTabClickTrigger();
