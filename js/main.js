@@ -79,9 +79,9 @@
 		$(window).resize(function(){
 			getHeight();
 		})
-		window.addEventListener('load', function() {
-		  getHeight();
-		})
+		setInterval(function(){
+	    	getHeight();
+	    }, 1000);
 	};
 
 	var customTabClickTrigger = function() {
