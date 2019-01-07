@@ -79,9 +79,12 @@
 		$(window).resize(function(){
 			getHeight();
 		})
+		window.addEventListener('load', function() {
+		  getHeight();
+		})
 	};
 
-	var tabClickTrigger = function() {
+	var customTabClickTrigger = function() {
 		$('.fh5co-tab-menu a').on('click', function(event) {
 			var $this = $(this),
 				data = $this.data('tab'),
@@ -113,7 +116,7 @@
 		})
 	};
 
-	var customTabClickTrigger = function() {
+	var tabClickTrigger = function() {
 		$('.custom-fh5co-tab-transition a').on('click', function(event) {
 			event.preventDefault();
 			var $this = $(this),
