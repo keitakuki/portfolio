@@ -1,4 +1,6 @@
 $font-primary: 'Source Sans Pro', 'YuGothic', Arial, sans-serif;
+//$font-primary: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+
 
 // Overrides
 $grid-gutter-width: 40px !default; 
@@ -404,6 +406,9 @@ figure {
 			font-weight: bold;
 			text-transform: uppercase;
 		}
+		p {
+			font-size: 14px;
+		}
 	}
 }
 
@@ -548,6 +553,9 @@ figure {
 			margin-top: 10px;
 			font-weight: bold;
 			text-transform: uppercase;
+		}
+		p {
+			font-size: 14px;
 		}
 	}
 }

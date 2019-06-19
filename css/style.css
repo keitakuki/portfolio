@@ -295,6 +295,8 @@ figure {
       letter-spacing: 2px;
       font-weight: bold;
       text-transform: uppercase; }
+    .fh5co-feature .fh5co-text p {
+      font-size: 14px; }
 
 .fh5co-gallery {
   position: relative;
@@ -426,6 +428,8 @@ figure {
       margin-top: 10px;
       font-weight: bold;
       text-transform: uppercase; }
+    .fh5co-gallery .fh5co-text p {
+      font-size: 14px; }
 
 .chart {
   width: 160px;
